@@ -1,0 +1,7 @@
+<custom-datepicker [formControl]="formControl"></custom-datepicker>
+<mat-error *ngIf="formControl.hasError('required')">This date is required</mat-error>
+<mat-error *ngIf="formControl.hasError('invalidDateError')">This format is incorrect</mat-error>
+
+
+<pre>errors : {{ formControl.errors | json }}</pre>
+<pre>value : {{ formControl.value}}</pre>
